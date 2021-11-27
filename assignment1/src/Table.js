@@ -1,4 +1,5 @@
 import react, { Component } from "react";
+import ChildTable from "./ChildTable"
 
 class Table extends Component{
 
@@ -39,7 +40,7 @@ class Table extends Component{
                     {data}
                     </tbody>
                 </table>
-                {/* {JSON.stringify(robs)} */}
+                <ChildTable robs = {robs}/>
                 
             </div>
         )
