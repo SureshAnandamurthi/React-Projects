@@ -2,14 +2,14 @@ import React, { Component} from "react";
 
 class Card extends Component{
     render(props){
-        let {id, username, email} = this.props;
+        let {id, name, username, email} = this.props;
         return(
             <div className="bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5">
                 <div>
                     <img src={`https://robohash.org/${id}?150x150`} alt="rob"></img>
                 </div>
-                <div>
-                    <h6>{id}</h6>
+                <div className="tc">
+                    <h6>{name}</h6>
                     <h6>{username}</h6>
                     <h6>{email}</h6>
                 </div>

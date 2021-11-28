@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Card from "./Card";
 class CardList extends Component {
-
+    
     render(props){
         let { robots } = this.props;
         const cardArry = robots.map((ele, ind) =>{
