@@ -4,14 +4,17 @@ import Articles from "./Articles";
 import ArticleInfo from "./ArticleInfo";
 
 class Home extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             newsArticles: [],
-            selectedArticle: {}
+            selectedArticle: {},
+            search : ""
         }
     }
-
+    updateSearch = ()=>{
+        this.setState({search: this.props.search})
+    }
     showArticle = ((article)=>{
         console.log(article);
         this.setState({selectedArticle : article});
@@ -31,6 +34,7 @@ class Home extends React.Component {
     render() { 
         return <div>
             <h3>Home Component</h3>
+            <pre>{JSON.stringify(this.state.search)}</pre>
             <div className="container">
                 <div className="row">
                     <div className="col md-8">
